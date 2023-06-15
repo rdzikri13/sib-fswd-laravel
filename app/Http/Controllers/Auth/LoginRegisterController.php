@@ -30,7 +30,7 @@ class LoginRegisterController extends Controller
 
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard')->with(['success' => 'Selamat Datang di R Store']);;
+            return redirect()->route('dashboard')->with(['success' => 'Welcome to Dzikri Store']);;
         }else{
             return redirect()->back();
         }
@@ -63,7 +63,7 @@ class LoginRegisterController extends Controller
         Auth::attempt($data);
         $request->session()->regenerate();
 
-        return redirect()->route('dashboard')->with(['success' => 'Selamat Datang di R Store']);
+        return redirect()->route('dashboard')->with(['success' => 'Welcome to Dzikri Store']);
     }
 
     public function logout(Request $request)
